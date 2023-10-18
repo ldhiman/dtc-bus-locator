@@ -18,8 +18,8 @@ def background_task():
     while not stop_task:
         feed = gtfs_realtime_pb2.FeedMessage()
 
-        # Replace this URL with the correct GTFS Realtime feed URL
-        feed_url = "https://otd.delhi.gov.in/api/realtime/VehiclePositions.pb?key=8YFFZlIaZSrR2790xMx0cmTQ2n2qadOn"
+        # Replace API_KEY with api key provided from https://otd.delhi.gov.in/
+        feed_url = "https://otd.delhi.gov.in/api/realtime/VehiclePositions.pb?key=API_KEY"
 
         response = urllib.request.urlopen(feed_url)
         feed.ParseFromString(response.read())
