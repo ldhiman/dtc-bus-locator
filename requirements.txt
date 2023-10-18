@@ -1,5 +1,1 @@
-urllib
-threading
-time
-turtle
-ujson
+ujson==5.8.0
